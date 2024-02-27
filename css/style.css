@@ -1,0 +1,262 @@
+/* main navigation */
+.main-header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: "Bebas Neue", sans-serif; /* Font pairing Montserrat uppercase secondary and regaular body */
+    font-size: 28px;
+    letter-spacing: 3.5px;
+    color: brown;
+    max-width: 100%;
+}
+.main-header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.main-header nav a  {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px ;
+    letter-spacing: 1.5px;
+}
+.main-header nav a:hover  {
+    text-decoration: none;
+    color:brown;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px ;
+    letter-spacing: 1.5px;  
+}
+/* main content on home page */
+main { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250, 1fr));
+    gap: 0px;
+    padding-left: 20px;
+}
+/* Featured Marvel News*/
+.featured-article {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    display: grid;
+    text-decoration: none;
+    color: black;
+}
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.content img {
+    height: auto;
+    max-width: 30%;
+    border: 3px black solid;
+    box-shadow: 1px 1px 8px black;
+}
+.text-container {
+    margin-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    max-width: 80%;
+}
+.text-container h3 {
+    font-size: 30px;
+}
+hr {
+    color: black;
+    border-top: 2px solid;
+    margin-top: 50px;
+}
+.content-paragraph {
+    display: flex;
+    flex-direction: column; /* Stacking elements vertically */
+    margin-top: 5px; /* Adjust spacing between h3 and p */
+    font-size: 16px;
+}
+/* Latest News */
+.latest-news { 
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+.latest-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 60px;
+    padding: 10px;
+}
+.latest1 img, .latest2 img, .latest3 img, .latest4 img {
+    max-width: 400px;
+    height: 275px;
+    margin-top: 20px;
+    border: 4px solid black;
+    box-shadow: 1px 1px 8px black;
+}
+.latest-news  h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+/* Article Page */
+.article-container {
+    padding: 20px;
+    padding-top: 0;
+    margin: auto;
+    max-width: 850px;
+}
+.article-title {
+    margin-bottom: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+}
+.article-content {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-content section {
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+.article-content section p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+}
+.article-content section img {
+    max-width: 100%;
+    height: auto;
+}
+aside {
+    max-width: 80%;
+    min-width: 50%;
+    float: right;
+    padding-left: 20px;
+}
+.sidebar {
+   width: 100px;
+   background-color: brown;
+}
+.sidebar h3 {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.sidebar p {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.more-article {
+    padding: 5px;
+}
+/* Responsive Home Page */
+@media (max-width: 768px) {
+    .content,  .latest-content {
+        display: grid;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+    }
+    .content img, .latest1 img, .latest2 img, .latest3 img, .latest4 img {
+        max-width: 100%; /* Make the image fill its container */
+        height:fit-content; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add spacing between image and other content */
+    }
+    .text-container {
+        max-width: 100%;
+        margin-left: 0; 
+    }
+    .text-container h3{
+        font-size: 22px; /* Reduce font size for smaller screens */
+    }
+    .content-paragraph {
+        margin-top: 5px; /* Adjust spacing between h3 and p */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+    .latest-news h3 {
+        font-size: 18px;
+        max-width: 100%;
+    }
+}
+/* Gallery Page CSS */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    margin: 50px;
+}
+.gallery-title {
+    display: flex;
+    justify-content: center;
+}
+.gallery-title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 38px;
+    letter-spacing: 2px;
+    color: brown;
+}
+.photo-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 1px 1px 8px black;
+}
+.photo-slide h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+}
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+.prev-button, .next-button {
+    width: 120px;
+    background-color: brown;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 25px;
+    border: 2px solid brown;
+    box-shadow: 1px 1px 4px black;
+}
+.prev-button:hover, .next-button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    box-shadow: 1px 1px 4px black;
+}
+/* footer */
+footer {
+   max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: brown;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 2.5px;
+    color: white;
+}
+/* Hamburger menu style */
+.hamburger {
+    display:none;
+    cursor:pointer;
+    font-size: 60px ;
+}
+/* Hiding regular nav on smaller screen */
+@media (max-width: 768px) {
+    .hamburger { display: block;} /* show hamburger menu */
+    .main-header nav ul { flex-direction: column; display: none;} /* initially hide nav menu */
+    .main-header nav ul.active {display: flex;}
+}
+/* Hiding regular nav on smaller screen */
+
+

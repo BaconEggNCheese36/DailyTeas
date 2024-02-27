@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>The Daily T's</h1>
+        <nav>
+            <div class="hamburger">☰</div> <!-- Hamburger Icon -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="gallery-title">
+            <h1>Marvel Gallery</h1>
+        </div>
+        <div class="gallery-controls"> <!--Next and Prev Button-->
+            <button class="prev-button" id="prev">Previous</button>
+            <button class="next-button" id="next">Next</button>
+        </div>
+        <main class="photo-gallery">
+            <div class="photo-slide">
+                <img src="images/dpwolv.jpeg" alt="Deadpool and Wolvering on set">
+                <h1>Deadpool & Wolverine on set together</h1>
+            </div>
+            <div class="photo-slide">
+                <img src="images/webcast2.jpeg" alt="Cast of Madame Web suited up">
+                <h1>The cast of Madame Web suited up</h1>
+            </div>
+            <div class="photo-slide">
+                <img src="images/themarvels.jpeg" alt="Cast of The Marvels">
+                <h1>The cast of The Marvels</h1>
+            </div>
+            <div class="photo-slide">
+                <img src="images/fantasticcast.jpeg" alt="Cast of Fanastic Four">
+                <h1>The cast of Fantastic Four</h1>
+            </div>  
+        </main>
+    
+        <!-- Add your JavaScript code here -->
+        <script> 
+            document.getElementById("prev").addEventListener("click", function() {
+                showPreviousSlide(); 
+            }); 
+            document.getElementById("next").addEventListener("click", function() {
+                showNextSlide();
+            }); 
+            var currentSlide = 0;
+            var slides = document.querySelectorAll(".photo-slide");
+    
+            // Hide all slides except the first one
+            for (var i = 1; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            function showPreviousSlide() {
+                slides[currentSlide].style.display = "none";
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                slides[currentSlide].style.display = "block";
+            }
+    
+            function showNextSlide() {
+                slides[currentSlide].style.display = "none";
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].style.display = "block";
+            }
+        </script>
+    <footer>
+        <p>Contact us at thedailyteas@gmail.com</p>
+    </footer>
+</body>
+</html>
+     

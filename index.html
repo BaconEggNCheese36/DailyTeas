@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>The Daily T's</h1>
+        <nav>
+            <div class="hamburger">☰</div> <!-- Hamburger Icon -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <a href="article.html" class="featured-article">
+            <section class="featured-article">
+                <h2>Featured Marvel News</h2>
+                <div class="content">
+                    <img src="images/deadpool1.jpeg" alt="Deadpool laying on the ground">
+                    <div class="text-container">
+                        <h3>'Deadpool 3' Breaks Record For Most-Viewed Trailer In First 24 Hours</h3>
+                        <div class="content-paragraph">
+                            <p>The first trailer for the much-anticipated “Deadpool and Wolverine” movie was viewed by 365 million people in the first 24 hours</p>
+                        </div>
+                    </div>
+             </div>      
+            </section> 
+        </a> 
+        <div>
+            <hr> <!--horizotal line-->
+        </div>
+        <section class="latest-news">  
+            <h2>Latest Movie News</h2>
+            <div class="latest-content">
+                <div class="latest1">
+                    <img src="images/fantasticlogo.jpeg" alt="New Fantastic Four (2025) Logo">
+                    <h3>Marvel Studios Announces 'Fantastic Four' Cast</h3>
+                </div>
+                <div class="latest2">
+                    <img src="images/webcast.jpeg" alt="Madame Web Cast">
+                    <h3>Madame Web's Unfortunate Flop</h3>
+                </div>
+                 <div class="latest3">
+                    <img src="images/disneyplus.jpeg" alt="Disney Plus Logo">
+                    <h3>New MCU Timelines Arrive on Disney+</h3>
+                </div>
+                <div class="latest4">
+                    <img src="images/marvellogo.png" alt="Marvel Studio Logo">
+                    <h3>All the Marvel Movies Releasing in 2024 and Beyond</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('.main-header nav ul').classList.toggle('active');});
+    </script>
+    <footer>
+        <p>Contact us at thedailyteas@gmail.com</p>
+    </footer>
+</body>
+</html>
